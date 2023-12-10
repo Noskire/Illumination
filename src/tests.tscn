@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8ga50xwwk0sj"]
+[gd_scene load_steps=5 format=3 uid="uid://b8ga50xwwk0sj"]
 
 [ext_resource type="Script" path="res://src/Laser.gd" id="1_ulms8"]
 [ext_resource type="Texture2D" uid="uid://btti8p3qjqv7y" path="res://icon.svg" id="2_onrsx"]
+[ext_resource type="Script" path="res://src/PowerUp.gd" id="3_26awx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o0t48"]
 size = Vector2(128, 128)
@@ -30,6 +31,44 @@ position = Vector2(696, 110)
 texture = ExtResource("2_onrsx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+shape = SubResource("RectangleShape2D_o0t48")
+
+[node name="PowerUp" type="StaticBody2D" parent="." groups=["PowerUp"]]
+position = Vector2(865, 291)
+script = ExtResource("3_26awx")
+
+[node name="Sprite2D" type="Sprite2D" parent="PowerUp"]
+modulate = Color(0.333333, 0.333333, 0, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_onrsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUp"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_o0t48")
+
+[node name="PowerUp2" type="StaticBody2D" parent="." groups=["PowerUp"]]
+position = Vector2(865, 399)
+script = ExtResource("3_26awx")
+color_inactive = "#550055"
+color_active = "#ff72ff"
+
+[node name="Sprite2D" type="Sprite2D" parent="PowerUp2"]
+modulate = Color(0.333333, 0.333333, 0, 1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_onrsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PowerUp2"]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_o0t48")
+
+[node name="Water" type="CharacterBody2D" parent="." groups=["Refraction"]]
+modulate = Color(0, 0.65098, 0.439216, 1)
+position = Vector2(599, 508)
+
+[node name="Sprite2D" type="Sprite2D" parent="Water"]
+texture = ExtResource("2_onrsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Water"]
 shape = SubResource("RectangleShape2D_o0t48")
 
 [node name="Mirror" type="CharacterBody2D" parent="." groups=["Mirrors"]]
