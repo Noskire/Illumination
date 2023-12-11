@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ciblbp737qnnc"]
+[gd_scene load_steps=13 format=3 uid="uid://ciblbp737qnnc"]
 
 [ext_resource type="Texture2D" uid="uid://dh50sg6qvxjge" path="res://assets/tileset.png" id="1_gbkte"]
 [ext_resource type="PackedScene" uid="uid://lq8lgxulsw1l" path="res://src/player.tscn" id="2_lh6i5"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cuh45j5mekahn" path="res://src/refraction.tscn" id="6_iji1y"]
 [ext_resource type="PackedScene" uid="uid://gkt6iptivgi2" path="res://src/portal_in.tscn" id="7_jgjht"]
 [ext_resource type="PackedScene" uid="uid://bffkjemfqs6jw" path="res://src/portal_out.tscn" id="8_xd0vs"]
+[ext_resource type="PackedScene" uid="uid://dynjwf7w8peom" path="res://src/PressurePlate.tscn" id="9_7d7k2"]
+[ext_resource type="PackedScene" uid="uid://bovet6w1nb1b8" path="res://src/door.tscn" id="10_08sbv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qubdw"]
 texture = ExtResource("1_gbkte")
@@ -16,19 +18,31 @@ texture_region_size = Vector2i(64, 64)
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_1/angular_velocity = 0.0
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_1/angular_velocity = 0.0
 0:1/0 = 0
 0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:1/0/physics_layer_0/angular_velocity = 0.0
+0:1/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_1/angular_velocity = 0.0
+0:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_1/angular_velocity = 0.0
+1:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_b2csm"]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 2
+physics_layer_1/collision_mask = 2
 sources/1 = SubResource("TileSetAtlasSource_qubdw")
 
 [node name="Sokoban" type="Node2D"]
@@ -48,7 +62,7 @@ position = Vector2(972, 407)
 
 [node name="Reflection" parent="." instance=ExtResource("4_qd0ev")]
 position = Vector2(756, 521)
-rotation = 0.383972
+rotation = 3.52557
 
 [node name="Reflection2" parent="." instance=ExtResource("4_qd0ev")]
 position = Vector2(341, 295)
@@ -63,3 +77,10 @@ portal_out = NodePath("../PortalOut")
 
 [node name="PortalOut" parent="." instance=ExtResource("8_xd0vs")]
 position = Vector2(1054, 600)
+
+[node name="PressurePlate" parent="." instance=ExtResource("9_7d7k2")]
+position = Vector2(974, 132)
+
+[node name="Door" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("10_08sbv")]
+position = Vector2(35, 396)
+pressure_plate = NodePath("../PressurePlate")
