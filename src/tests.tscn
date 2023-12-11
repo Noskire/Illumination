@@ -63,7 +63,7 @@ shape = SubResource("RectangleShape2D_o0t48")
 
 [node name="Water" type="CharacterBody2D" parent="." groups=["Refraction"]]
 modulate = Color(0, 0.65098, 0.439216, 1)
-position = Vector2(599, 508)
+position = Vector2(545, 423)
 
 [node name="Sprite2D" type="Sprite2D" parent="Water"]
 texture = ExtResource("2_onrsx")
@@ -71,9 +71,10 @@ texture = ExtResource("2_onrsx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Water"]
 shape = SubResource("RectangleShape2D_o0t48")
 
-[node name="Mirror" type="CharacterBody2D" parent="." groups=["Mirrors"]]
+[node name="Mirror" type="CharacterBody2D" parent="." groups=["Reflection"]]
 modulate = Color(0, 0.733333, 1, 0.498039)
 position = Vector2(1000, 320)
+rotation = 0.410286
 scale = Vector2(0.5, 5)
 
 [node name="Sprite2D" type="Sprite2D" parent="Mirror"]
@@ -82,7 +83,7 @@ texture = ExtResource("2_onrsx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mirror"]
 shape = SubResource("RectangleShape2D_o0t48")
 
-[node name="Mirror2" type="CharacterBody2D" parent="." groups=["Mirrors"]]
+[node name="Mirror2" type="CharacterBody2D" parent="." groups=["Reflection"]]
 modulate = Color(0, 0.733333, 1, 0.498039)
 position = Vector2(109, 320)
 scale = Vector2(0.5, 5)

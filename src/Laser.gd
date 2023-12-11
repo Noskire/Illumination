@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var ray = $RayCast2D
-@onready var line = $Line2D
+@onready var first_line = $Line2D
 
 var tween
 var is_casting = false
@@ -9,6 +9,8 @@ var max_length = 1000
 var max_bounces = 10
 var pu # Actual power_up being light up
 var line_color
+var line
+var second_line # Use in portals
 
 # Refraction vars
 var crit_and # critical_angle ???
@@ -17,21 +19,28 @@ var crit_and # critical_angle ???
 # sin(a2) = (n1 * sin(a1)) / n2 = ri * sin(a1)
 
 func _ready():
+	line = first_line
+	second_line = null
 	pu = null
 	line_color = line.get_default_color()
 	line.points[1] = Vector2.ZERO # "Erase" the line view in the editor
 
 func _process(_delta):
-	var mbl_pressed = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
+	line = first_line
+	var mbl_pressed = true #Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
 	line.clear_points() # Reset the line
+	if second_line != null:
+		second_line.clear_points()
 	
 	var powering_up = false
+	var using_portal = false
 	if mbl_pressed: # If Mouse Button Left is pressed
 		line.add_point(Vector2.ZERO) # The first point will be in the Line global position
 		
 		ray.global_position = line.global_position # Move the RayCast to the same position of the Line
 		# Get the direction of line/ray pos to mouse click pos, normalize and multiply by max_length
-		ray.target_position = (ray.get_global_mouse_position()-line.global_position).normalized() * max_length
+		#ray.target_position = (ray.get_global_mouse_position()-line.global_position).normalized() * max_length
+		ray.target_position = ((ray.global_position+Vector2(1000, 0))-line.global_position).normalized() * max_length
 		ray.force_raycast_update() # Force update
 		
 		var pt # End point of collision
@@ -64,10 +73,38 @@ func _process(_delta):
 				pu.powering(line_color, true)
 				break
 			
-			if not coll.is_in_group("Mirrors") and not coll.is_in_group("Refraction"): # If collides in a "wall" or something, breaks
+			# If collides in a "wall" or something, breaks
+			if not coll.is_in_group("Reflection") and not coll.is_in_group("Refraction") and not coll.is_in_group("PortalIn"):
 				break
 			
-			if coll.is_in_group("Mirrors"): # If collides in a mirror, then bounces
+			if coll.is_in_group("PortalIn"):
+				using_portal = true
+				second_line = coll.portal_out.line
+				line = second_line
+				line.add_point(Vector2.ZERO)
+				#normal = ray.get_collision_normal() # Get collision normal
+				#if normal == Vector2.ZERO: # If normal equals 0, breaks
+					#break
+				
+				# If already disabled any collision (see below), enable it
+				if prev != null:
+					prev.collision_layer = collision_bits
+					prev.collision_mask = collision_bits
+				# Disable collision (Prevents to bounce inside collider)
+				prev = coll
+				prev.collision_layer = 0
+				prev.collision_mask = 0
+				
+				# Moves RayCast to new position, bounces it and force update
+				pt = coll.portal_out.position
+				ray.global_position = pt
+				#ray.target_position = ray.target_position - (coll.portal_out.position - coll.position)
+				ray.force_raycast_update()
+				
+				bounces += 1 # Increment number of bounces
+				if bounces >= max_bounces: # If hit max_bounces, breaks
+					break
+			if coll.is_in_group("Reflection"): # If collides in a mirror, then bounces
 				normal = ray.get_collision_normal() # Get collision normal
 				if normal == Vector2.ZERO: # If normal equals 0, breaks
 					break
@@ -123,6 +160,9 @@ func _process(_delta):
 	if pu != null and not powering_up: # If has a powerUp node saved, but it's not powering anymore
 		pu.powering(line_color, false) # Stop powering
 		pu = null
+	if second_line != null and not using_portal:
+		second_line.clear_points()
+		second_line = null
 	set_is_casting(mbl_pressed) # Animate line via tween
 
 # Animate line via tween
