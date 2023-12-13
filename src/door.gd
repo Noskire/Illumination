@@ -1,9 +1,21 @@
 extends CharacterBody2D
 
+@export_enum("Blue", "Green", "Purple", "Yellow") var crystal_color: String = "Yellow"
 @export var pressure_plate: Area2D
 
 var is_open = false
 var tween
+
+func _ready():
+	# Placeholder
+	if crystal_color == "Blue":
+		$Sprite2D.modulate = Color("#2d7fff")
+	elif crystal_color == "Green":
+		$Sprite2D.modulate = Color("#7fff7f")
+	elif crystal_color == "Purple":
+		$Sprite2D.modulate = Color("#7f7fff")
+	elif crystal_color == "Yellow":
+		$Sprite2D.modulate = Color("#ffff7f")
 
 func _process(_delta):
 	if not is_open and pressure_plate.pressed == true:

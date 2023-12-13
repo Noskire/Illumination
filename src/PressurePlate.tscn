@@ -10,7 +10,6 @@ radius = 16.0
 script = ExtResource("1_jghia")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 0.447059, 1)
 position = Vector2(2, 0)
 scale = Vector2(0.326, 0.326)
 texture = ExtResource("1_131qo")

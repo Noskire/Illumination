@@ -1,14 +1,28 @@
 extends CharacterBody2D
 
-@export var color_inactive = "#555500" # Initial color (placeholder)
-@export var color_active = "#ffff72" # MUST BE the same as the Laser/Line default color
+@export_enum("Blue", "Green", "Purple", "Yellow") var crystal_color: String = "Yellow"
+@export var color_inactive = "#555555" # Initial color
+@export var color_active = "#ffffff" # MUST BE the same as the Laser/Line default color
 @export var time_needed = 3.0 # Time charging before be always up
+
+var blue_path = "res://assets/Crystal_B.png"
+var green_path = "res://assets/Crystal_G.png"
+var purple_path = "res://assets/Crystal_P.png"
+var yellow_path = "res://assets/Crystal_Y.png"
 
 var powered_up = false
 var powering_up = false
 var time
 
 func _ready():
+	if crystal_color == "Blue":
+		$Sprite2D.set_texture(load(blue_path))
+	elif crystal_color == "Green":
+		$Sprite2D.set_texture(load(green_path))
+	elif crystal_color == "Purple":
+		$Sprite2D.set_texture(load(purple_path))
+	elif crystal_color == "Yellow":
+		$Sprite2D.set_texture(load(yellow_path))
 	$Sprite2D.set_modulate(Color(color_inactive)) # Set initial color
 	time = 0
 
@@ -26,7 +40,8 @@ func _process(delta):
 
 func powering(color, value):
 	# Only start to power up if the line/color is equal to color_active
-	if color.is_equal_approx(color_active) and value == true:
+	#if color.is_equal_approx(color_active) and value == true:
+	if color == crystal_color and value == true:
 		powering_up = true
 	else:
 		powering_up = false

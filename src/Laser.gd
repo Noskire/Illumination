@@ -3,6 +3,8 @@ extends Node2D
 @onready var ray = $RayCast2D
 @onready var first_line = $Line2D
 
+@export_enum("Blue", "Green", "Purple", "Yellow") var crystal_color: String = "Yellow"
+
 var tween
 var is_casting = false
 var max_length = 1000
@@ -20,9 +22,17 @@ var crit_and # critical_angle ???
 
 func _ready():
 	line = first_line
+	if crystal_color == "Blue":
+		line.set_default_color(Color("#2d7fff"))
+	elif crystal_color == "Green":
+		line.set_default_color(Color("#7fff7f"))
+	elif crystal_color == "Purple":
+		line.set_default_color(Color("#7f7fff"))
+	elif crystal_color == "Yellow":
+		line.set_default_color(Color("#ffff7f"))
 	second_line = null
 	pu = null
-	line_color = line.get_default_color()
+	line_color = crystal_color
 	line.points[1] = Vector2.ZERO # "Erase" the line view in the editor
 
 func _process(_delta):
@@ -80,6 +90,7 @@ func _process(_delta):
 			if coll.is_in_group("PortalIn"):
 				using_portal = true
 				second_line = coll.portal_out.line
+				second_line.set_default_color(line.get_default_color())
 				line = second_line
 				line.add_point(Vector2.ZERO)
 				#normal = ray.get_collision_normal() # Get collision normal
