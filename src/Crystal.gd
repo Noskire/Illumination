@@ -11,7 +11,7 @@ var purple_path = "res://assets/Crystal_P.png"
 var yellow_path = "res://assets/Crystal_Y.png"
 
 var powered_up = false
-var powering_up = false
+@export var powering_up = false # Used to start the scene with a already powered crystal
 var time
 
 func _ready():

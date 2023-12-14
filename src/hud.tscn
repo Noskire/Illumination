@@ -1,0 +1,71 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmup6c2tjt0kf"]
+
+[ext_resource type="Script" path="res://src/hud.gd" id="1_wq3pj"]
+
+[node name="HUD" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_wq3pj")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 256.0
+offset_top = 144.0
+offset_right = -256.0
+offset_bottom = -144.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBox" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 75.0
+offset_top = 24.5
+offset_right = -75.0
+offset_bottom = -24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Title" type="Label" parent="Control/VBox"]
+layout_mode = 2
+text = "Level Completed"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Time" type="Label" parent="Control/VBox"]
+layout_mode = 2
+text = "Total Time: mm:ss"
+horizontal_alignment = 1
+
+[node name="Next" type="Button" parent="Control/VBox"]
+layout_mode = 2
+text = "Next Level"
+
+[node name="Restart" type="Button" parent="Control/VBox"]
+layout_mode = 2
+text = "Restart Level"
+
+[node name="Menu" type="Button" parent="Control/VBox"]
+layout_mode = 2
+text = "Main Menu"
+
+[connection signal="button_up" from="Control/VBox/Next" to="." method="_on_next_button_up"]
+[connection signal="button_up" from="Control/VBox/Restart" to="." method="_on_restart_button_up"]
+[connection signal="button_up" from="Control/VBox/Menu" to="." method="_on_menu_button_up"]

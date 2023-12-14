@@ -7,6 +7,7 @@
 size = Vector2(48, 64)
 
 [node name="Reflection" type="CharacterBody2D" groups=["Movable", "Reflection"]]
+collision_mask = 3
 script = ExtResource("1_igj4i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

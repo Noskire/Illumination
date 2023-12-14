@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://xwl2xp2w1bcc"]
+
+[ext_resource type="Texture2D" uid="uid://2hq0bh5yvosx" path="res://assets/Prismv1.png" id="1_0wui8"]
+[ext_resource type="Script" path="res://src/exit.gd" id="1_q8mw8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mgf3d"]
+radius = 16.0
+
+[node name="Exit" type="Area2D"]
+script = ExtResource("1_q8mw8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.326, 0.326)
+texture = ExtResource("1_0wui8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_mgf3d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

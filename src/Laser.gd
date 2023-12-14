@@ -58,7 +58,8 @@ func _process(_delta):
 		var normal # Raycast normal
 		var prev = null # Collision of previous collider
 		var bounces = 0 # Num. of bounces
-		var collision_bits = 1 # layer 1 only (00001)
+		var collision_bits_layer = 1 # layer 1 only (00001)
+		var collision_bits_mask = 3 # layer 1 and 2 (00011)
 		while true:
 			if not ray.is_colliding(): # If not colliding, traces a straight line and breaks
 				pt = ray.global_position + ray.target_position
@@ -98,13 +99,13 @@ func _process(_delta):
 					#break
 				
 				# If already disabled any collision (see below), enable it
-				if prev != null:
-					prev.collision_layer = collision_bits
-					prev.collision_mask = collision_bits
-				# Disable collision (Prevents to bounce inside collider)
-				prev = coll
-				prev.collision_layer = 0
-				prev.collision_mask = 0
+				#if prev != null:
+					#prev.collision_layer = collision_bits_layer
+					#prev.collision_mask = collision_bits_mask
+				## Disable collision (Prevents to bounce inside collider)
+				#prev = coll
+				#prev.collision_layer = 0
+				#prev.collision_mask = 0
 				
 				# Moves RayCast to new position, bounces it and force update
 				pt = coll.portal_out.position
@@ -122,9 +123,9 @@ func _process(_delta):
 				
 				# If already disabled any collision (see below), enable it
 				if prev != null:
-					prev.collision_layer = collision_bits
-					prev.collision_mask = collision_bits
-				# Disable collision (Prevents to bounce inside collider)
+					prev.collision_layer = collision_bits_layer
+					prev.collision_mask = collision_bits_mask
+				## Disable collision (Prevents to bounce inside collider)
 				prev = coll
 				prev.collision_layer = 0
 				prev.collision_mask = 0
@@ -144,9 +145,9 @@ func _process(_delta):
 				
 				# If already disabled any collision (see below), enable it
 				if prev != null:
-					prev.collision_layer = collision_bits
-					prev.collision_mask = collision_bits
-				# Disable collision (Prevents to bounce inside collider)
+					prev.collision_layer = collision_bits_layer
+					prev.collision_mask = collision_bits_mask
+				## Disable collision (Prevents to bounce inside collider)
 				prev = coll
 				prev.collision_layer = 0
 				prev.collision_mask = 0
@@ -164,8 +165,8 @@ func _process(_delta):
 					break
 		# END WHILE
 		if prev != null: # If already disabled any collision, enable it
-			prev.collision_layer = 1
-			prev.collision_mask = 1
+			prev.collision_layer = collision_bits_layer
+			prev.collision_mask = collision_bits_mask
 	# END IF
 	# If not, stop powering the first one
 	if pu != null and not powering_up: # If has a powerUp node saved, but it's not powering anymore

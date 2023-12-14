@@ -7,6 +7,7 @@
 size = Vector2(48, 64)
 
 [node name="Refraction" type="CharacterBody2D" groups=["Movable", "Refraction"]]
+collision_mask = 3
 script = ExtResource("1_8aek4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
