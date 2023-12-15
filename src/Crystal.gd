@@ -49,6 +49,9 @@ func powering(color, value):
 func activate():
 	# Power up
 	powered_up = true
+	var pp = get_parent().find_children("Pressure*")
+	for p in pp:
+		p.is_pressed()
 	print("Powered Up!")
 
 func move(vel): # Called by player node

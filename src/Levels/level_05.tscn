@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2cb0of1okg60"]
+
+[ext_resource type="PackedScene" uid="uid://uqqoq0x23eix" path="res://src/tile_map.tscn" id="1_gr2qh"]
+[ext_resource type="PackedScene" uid="uid://bmup6c2tjt0kf" path="res://src/hud.tscn" id="2_4kwy5"]
+[ext_resource type="PackedScene" uid="uid://dynjwf7w8peom" path="res://src/PressurePlate.tscn" id="3_l7ly4"]
+[ext_resource type="PackedScene" uid="uid://lq8lgxulsw1l" path="res://src/player.tscn" id="4_iwgm4"]
+[ext_resource type="PackedScene" uid="uid://ba6ibsmnicerj" path="res://src/laser.tscn" id="5_16d88"]
+[ext_resource type="PackedScene" uid="uid://bs0f4if65kw2g" path="res://src/crystal.tscn" id="6_vh05k"]
+[ext_resource type="PackedScene" uid="uid://bb1fgtbhjbfsy" path="res://src/reflection.tscn" id="7_vwa0k"]
+[ext_resource type="PackedScene" uid="uid://bovet6w1nb1b8" path="res://src/door.tscn" id="8_yqv3m"]
+[ext_resource type="PackedScene" uid="uid://xwl2xp2w1bcc" path="res://src/exit.tscn" id="9_508f0"]
+
+[node name="Level 05" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_gr2qh")]
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 524288, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 393225, 65537, 0, 327689, 65537, 0, 262153, 65537, 0, 196617, 65537, 0, 131081, 65537, 0, 65545, 65537, 0, 65544, 65537, 0, 65543, 65537, 0, 65542, 65537, 0, 65541, 65537, 0, 65540, 65537, 0, 65539, 65537, 0, 65538, 65537, 0, 65537, 65537, 0, 131073, 65537, 0, 196609, 65537, 0, 262145, 65537, 0, 327681, 65537, 0, 393217, 65537, 0, 458753, 65537, 0, 524289, 1, 0, 524290, 1, 0, 458754, 65537, 0, 393218, 65537, 0, 327682, 65537, 0, 262146, 65537, 0, 196610, 65537, 0, 131074, 65537, 0, 131075, 65537, 0, 196611, 65537, 0, 262147, 65537, 0, 327683, 65537, 0, 393219, 65537, 0, 458755, 65537, 0, 524291, 1, 0, 524292, 1, 0, 458756, 1, 0, 393220, 1, 0, 327684, 1, 0, 262148, 65537, 0, 196612, 65537, 0, 131076, 65537, 0, 131077, 65537, 0, 196613, 65537, 0, 262149, 65537, 0, 327685, 65537, 0, 393221, 65537, 0, 458757, 65537, 0, 524293, 1, 0, 524294, 1, 0, 458758, 65537, 0, 393222, 65537, 0, 327686, 65537, 0, 262150, 65537, 0, 196614, 65537, 0, 131078, 65537, 0, 131079, 65537, 0, 196615, 65537, 0, 262151, 65537, 0, 327687, 65537, 0, 393223, 65537, 0, 458759, 65537, 0, 524295, 1, 0, 524296, 1, 0, 458760, 65537, 0, 393224, 65537, 0, 327688, 65537, 0, 262152, 65537, 0, 196616, 65537, 0, 131080, 65537, 0, 458761, 65537, 0, 524297, 1, 0, 524298, 1, 0, 458762, 65537, 0, 393226, 65537, 0, 327690, 65537, 0, 262154, 65537, 0, 196618, 65537, 0, 131082, 65537, 0, 65546, 65537, 0, 65547, 65537, 0, 131083, 65537, 0, 196619, 65537, 0, 262155, 65537, 0, 327691, 65537, 0, 393227, 65537, 0, 458763, 65537, 0, 524299, 1, 0, 524300, 1, 0, 458764, 65537, 1, 393228, 65537, 1, 327692, 65537, 1, 262156, 1, 0, 196620, 1, 1, 131084, 1, 1, 65548, 1, 1, 65549, 1, 1, 131085, 65537, 0, 196621, 1, 1, 262157, 1, 0, 327693, 65537, 1, 393229, 65537, 0, 458765, 65537, 1, 524301, 1, 0, 524302, 1, 0, 458766, 65537, 1, 393230, 65537, 1, 327694, 65537, 1, 262158, 1, 0, 196622, 1, 1, 131086, 1, 1, 65550, 1, 1, 65551, 1, 0, 131087, 1, 0, 196623, 1, 0, 262159, 1, 0, 327695, 1, 0, 393231, 1, 0, 458767, 1, 0, 524303, 1, 0)
+
+[node name="HUD" parent="." instance=ExtResource("2_4kwy5")]
+
+[node name="Exit" parent="." instance=ExtResource("9_508f0")]
+position = Vector2(160, 448)
+
+[node name="PressurePlate" parent="." instance=ExtResource("3_l7ly4")]
+position = Vector2(864, 160)
+crystal_color = "Green"
+
+[node name="PressurePlate2" parent="." instance=ExtResource("3_l7ly4")]
+position = Vector2(864, 416)
+crystal_color = "Purple"
+
+[node name="Laser" parent="." instance=ExtResource("5_16d88")]
+position = Vector2(512, 512)
+rotation = -1.5708
+crystal_color = "Green"
+
+[node name="Laser2" parent="." instance=ExtResource("5_16d88")]
+position = Vector2(448, 64)
+rotation = 1.5708
+crystal_color = "Purple"
+
+[node name="Crystal" parent="." instance=ExtResource("6_vh05k")]
+position = Vector2(864, 160)
+crystal_color = "Green"
+
+[node name="Crystal2" parent="." instance=ExtResource("6_vh05k")]
+position = Vector2(864, 416)
+crystal_color = "Purple"
+
+[node name="Reflection" parent="." instance=ExtResource("7_vwa0k")]
+position = Vector2(640, 384)
+rotation = -0.383972
+
+[node name="Reflection2" parent="." instance=ExtResource("7_vwa0k")]
+position = Vector2(192, 256)
+rotation = 0.383972
+
+[node name="Door" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("8_yqv3m")]
+position = Vector2(32, 384)
+crystal_color = "Green"
+pressure_plate = NodePath("../PressurePlate")
+
+[node name="Door2" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("8_yqv3m")]
+position = Vector2(32, 352)
+crystal_color = "Purple"
+pressure_plate = NodePath("../PressurePlate2")
+
+[node name="Player" parent="." instance=ExtResource("4_iwgm4")]
+position = Vector2(100, 100)

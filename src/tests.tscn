@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b8ga50xwwk0sj"]
 
-[ext_resource type="Script" path="res://src/Laser.gd" id="1_ulms8"]
+[ext_resource type="Script" path="res://src/laser.gd" id="1_ulms8"]
 [ext_resource type="Texture2D" uid="uid://btti8p3qjqv7y" path="res://icon.svg" id="2_onrsx"]
 [ext_resource type="Script" path="res://src/PowerUp.gd" id="3_26awx"]
 

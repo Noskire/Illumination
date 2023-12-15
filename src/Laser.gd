@@ -132,7 +132,11 @@ func _process(_delta):
 				
 				# Moves RayCast to new position, bounces it and force update
 				ray.global_position = pt
-				ray.target_position = ray.target_position.bounce(normal)
+				var rot = int(self.rotation_degrees)
+				if abs(rot) == 90: # Little bug
+					ray.target_position = ray.target_position.reflect(normal)
+				else:
+					ray.target_position = ray.target_position.bounce(normal)
 				ray.force_raycast_update()
 				
 				bounces += 1 # Increment number of bounces

@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://src/Player.gd" id="1_ixvxk"]
 [ext_resource type="Texture2D" uid="uid://btti8p3qjqv7y" path="res://icon.svg" id="2_kqhdm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ffc41"]
-size = Vector2(64, 64)
+[sub_resource type="CircleShape2D" id="CircleShape2D_matud"]
+radius = 26.0
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 motion_mode = 1
@@ -15,7 +15,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_kqhdm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_ffc41")
+shape = SubResource("CircleShape2D_matud")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(40, 0)

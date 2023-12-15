@@ -1,0 +1,122 @@
+[gd_scene load_steps=13 format=3 uid="uid://oqg0tvx4ovvl"]
+
+[ext_resource type="PackedScene" uid="uid://uqqoq0x23eix" path="res://src/tile_map.tscn" id="1_543k6"]
+[ext_resource type="PackedScene" uid="uid://bmup6c2tjt0kf" path="res://src/hud.tscn" id="2_d467s"]
+[ext_resource type="PackedScene" uid="uid://dynjwf7w8peom" path="res://src/PressurePlate.tscn" id="3_htq15"]
+[ext_resource type="PackedScene" uid="uid://lq8lgxulsw1l" path="res://src/player.tscn" id="4_7oq20"]
+[ext_resource type="PackedScene" uid="uid://ba6ibsmnicerj" path="res://src/laser.tscn" id="5_25lwq"]
+[ext_resource type="PackedScene" uid="uid://bs0f4if65kw2g" path="res://src/crystal.tscn" id="6_hgolu"]
+[ext_resource type="PackedScene" uid="uid://bb1fgtbhjbfsy" path="res://src/reflection.tscn" id="7_8dsre"]
+[ext_resource type="Script" path="res://src/Crystal.gd" id="7_hjikk"]
+[ext_resource type="Texture2D" uid="uid://cxpa68wchm4lq" path="res://assets/Crystal_Y.png" id="8_7jmy2"]
+[ext_resource type="PackedScene" uid="uid://bovet6w1nb1b8" path="res://src/door.tscn" id="8_gfe4o"]
+[ext_resource type="PackedScene" uid="uid://xwl2xp2w1bcc" path="res://src/exit.tscn" id="9_hwhok"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udwod"]
+size = Vector2(48, 64)
+
+[node name="Level 07" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_543k6")]
+layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 524288, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 393225, 65537, 0, 327689, 65537, 0, 262153, 65537, 0, 196617, 65537, 0, 131081, 1, 1, 65545, 65537, 0, 65544, 65537, 0, 65543, 65537, 0, 65542, 65537, 0, 65541, 65537, 0, 65540, 1, 0, 65539, 65537, 0, 65538, 65537, 0, 65537, 65537, 0, 131073, 65537, 0, 196609, 65537, 0, 262145, 65537, 0, 327681, 65537, 0, 393217, 65537, 0, 458753, 65537, 0, 524289, 1, 0, 524290, 1, 0, 458754, 65537, 0, 393218, 65537, 0, 327682, 65537, 0, 262146, 65537, 0, 196610, 65537, 0, 131074, 65537, 0, 131075, 65537, 0, 196611, 65537, 0, 262147, 65537, 0, 327683, 65537, 0, 393219, 65537, 0, 458755, 65537, 0, 524291, 1, 0, 524292, 1, 0, 458756, 1, 0, 393220, 1, 0, 327684, 1, 0, 262148, 65537, 0, 196612, 65537, 0, 131076, 1, 0, 131077, 1, 1, 196613, 65537, 0, 262149, 65537, 0, 327685, 1, 0, 393221, 65537, 0, 458757, 65537, 0, 524293, 1, 0, 524294, 1, 0, 458758, 65537, 0, 393222, 65537, 0, 327686, 1, 0, 262150, 65537, 0, 196614, 65537, 0, 131078, 1, 1, 131079, 1, 1, 196615, 65537, 0, 262151, 65537, 0, 327687, 1, 0, 393223, 65537, 0, 458759, 65537, 0, 524295, 1, 0, 524296, 1, 0, 458760, 1, 0, 393224, 65537, 1, 327688, 1, 0, 262152, 65537, 0, 196616, 65537, 0, 131080, 1, 1, 458761, 65537, 0, 524297, 1, 0, 524298, 1, 0, 458762, 65537, 0, 393226, 65537, 0, 327690, 65537, 0, 262154, 65537, 0, 196618, 65537, 0, 131082, 1, 1, 65546, 65537, 0, 65547, 1, 0, 131083, 1, 0, 196619, 65537, 0, 262155, 65537, 0, 327691, 65537, 0, 393227, 65537, 0, 458763, 65537, 0, 524299, 1, 0, 524300, 1, 0, 458764, 65537, 0, 393228, 65537, 0, 327692, 1, 0, 262156, 65537, 0, 196620, 65537, 0, 131084, 65537, 0, 65548, 65537, 0, 65549, 65537, 0, 131085, 65537, 0, 196621, 65537, 0, 262157, 65537, 0, 327693, 65537, 1, 393229, 65537, 0, 458765, 65537, 0, 524301, 1, 0, 524302, 1, 0, 458766, 65537, 0, 393230, 65537, 0, 327694, 1, 0, 262158, 65537, 0, 196622, 65537, 0, 131086, 65537, 0, 65550, 65537, 0, 65551, 1, 0, 131087, 1, 0, 196623, 1, 0, 262159, 1, 0, 327695, 1, 0, 393231, 1, 0, 458767, 1, 0, 524303, 1, 0)
+
+[node name="HUD" parent="." instance=ExtResource("2_d467s")]
+
+[node name="Exit" parent="." instance=ExtResource("9_hwhok")]
+position = Vector2(160, 464)
+
+[node name="PressurePlate5" parent="." instance=ExtResource("3_htq15")]
+visible = false
+position = Vector2(509, 303)
+scale = Vector2(32, 18)
+crystal_color = "Green"
+
+[node name="PressurePlate" parent="." instance=ExtResource("3_htq15")]
+position = Vector2(864, 448)
+crystal_color = "Green"
+
+[node name="PressurePlate2" parent="." instance=ExtResource("3_htq15")]
+position = Vector2(640, 96)
+crystal_color = "Blue"
+
+[node name="PressurePlate3" parent="." instance=ExtResource("3_htq15")]
+position = Vector2(160, 112)
+crystal_color = "Green"
+
+[node name="PressurePlate4" parent="." instance=ExtResource("3_htq15")]
+position = Vector2(416, 448)
+crystal_color = "Purple"
+
+[node name="Laser" parent="." instance=ExtResource("5_25lwq")]
+position = Vector2(960, 256)
+rotation = 3.14159
+crystal_color = "Green"
+
+[node name="Laser2" parent="." instance=ExtResource("5_25lwq")]
+position = Vector2(864, 512)
+rotation = -1.5708
+crystal_color = "Blue"
+
+[node name="Laser3" parent="." instance=ExtResource("5_25lwq")]
+position = Vector2(64, 256)
+crystal_color = "Purple"
+
+[node name="Crystal" parent="." instance=ExtResource("6_hgolu")]
+position = Vector2(896, 448)
+crystal_color = "Green"
+
+[node name="Crystal2" type="CharacterBody2D" parent="." groups=["Movable", "PowerUp"]]
+position = Vector2(384, 96)
+collision_mask = 3
+script = ExtResource("7_hjikk")
+crystal_color = "Blue"
+
+[node name="Sprite2D" type="Sprite2D" parent="Crystal2"]
+scale = Vector2(0.326, 0.326)
+texture = ExtResource("8_7jmy2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crystal2"]
+position = Vector2(-3, 0)
+scale = Vector2(0.9, 0.9)
+shape = SubResource("RectangleShape2D_udwod")
+
+[node name="Crystal4" parent="." instance=ExtResource("6_hgolu")]
+position = Vector2(416, 448)
+crystal_color = "Purple"
+
+[node name="Reflection" parent="." instance=ExtResource("7_8dsre")]
+position = Vector2(672, 416)
+rotation = 0.523599
+
+[node name="Reflection2" parent="." instance=ExtResource("7_8dsre")]
+position = Vector2(352, 256)
+rotation = -0.785398
+
+[node name="Reflection3" parent="." instance=ExtResource("7_8dsre")]
+position = Vector2(864, 108)
+rotation = 3.92699
+
+[node name="Door" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("8_gfe4o")]
+position = Vector2(800, 544)
+rotation = -1.5708
+scale = Vector2(0.8, 1)
+crystal_color = "Green"
+pressure_plate = NodePath("../PressurePlate5")
+
+[node name="Door2" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("8_gfe4o")]
+position = Vector2(736, 160)
+crystal_color = "Blue"
+pressure_plate = NodePath("../PressurePlate2")
+
+[node name="Door3" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("8_gfe4o")]
+position = Vector2(32, 416)
+crystal_color = "Green"
+pressure_plate = NodePath("../PressurePlate3")
+
+[node name="Door4" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("8_gfe4o")]
+position = Vector2(32, 160)
+crystal_color = "Purple"
+pressure_plate = NodePath("../PressurePlate4")
+
+[node name="Player" parent="." instance=ExtResource("4_7oq20")]
+position = Vector2(160, 352)
