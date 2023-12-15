@@ -1,0 +1,60 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc5xdrumbehih"]
+
+[ext_resource type="Script" path="res://src/main_menu.gd" id="1_pcg3b"]
+
+[node name="MainMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pcg3b")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+text = "Game Title"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 171.0
+offset_top = 178.0
+offset_right = -171.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="New" type="Button" parent="VBox"]
+layout_mode = 2
+text = "New Game"
+
+[node name="Continue" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Continue"
+
+[node name="Highscore" type="Button" parent="VBox"]
+layout_mode = 2
+text = "Best Times"
+
+[connection signal="button_up" from="VBox/New" to="." method="_on_new_button_up"]
+[connection signal="button_up" from="VBox/Continue" to="." method="_on_continue_button_up"]
+[connection signal="button_up" from="VBox/Highscore" to="." method="_on_highscore_button_up"]

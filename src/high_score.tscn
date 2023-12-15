@@ -1,0 +1,115 @@
+[gd_scene load_steps=2 format=3 uid="uid://di57fkmls8uya"]
+
+[ext_resource type="Script" path="res://src/high_score.gd" id="1_hf6yh"]
+
+[node name="HighScore" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hf6yh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+text = "Best Times"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Grid" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 171.0
+offset_top = 178.0
+offset_right = -171.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 200
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="Label1" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label2" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label3" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label4" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label5" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label6" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label7" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label8" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label9" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="Label10" type="Label" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 01: --:--"
+
+[node name="AllTimes" type="Label" parent="Grid"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "All Levels: --:--"
+
+[node name="Empty" type="Label" parent="Grid"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Back" type="Button" parent="Grid"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+text = "Back to Menu"
+
+[connection signal="button_up" from="Grid/Back" to="." method="_on_back_button_up"]

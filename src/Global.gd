@@ -8,11 +8,12 @@ var levels = ["res://src/Levels/level_01.tscn",
 				"res://src/Levels/level_06.tscn",
 				"res://src/Levels/level_07.tscn",
 				"res://src/Levels/level_08.tscn",
-				#"res://src/Levels/level_09.tscn",
-				#"res://src/Levels/level_10.tscn",
+				"res://src/Levels/level_09.tscn",
+				"res://src/Levels/level_10.tscn",
 				]
 
-#var levels_time = [0.0, 0.0, 0.0, 0.0]
+var levels_time = [0.0, 0.0, 0.0, 0.0, 0.0,
+					0.0, 0.0, 0.0, 0.0, 0.0]
 var actual_level = 0
 
 func get_level_path(level):
