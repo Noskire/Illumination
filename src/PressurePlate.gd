@@ -8,13 +8,13 @@ var pressed = false
 func _ready():
 	# Placeholder
 	if crystal_color == "Blue":
-		$Sprite2D.modulate = Color("#2d7fff")
+		$CrystalSprite.frame = 1
 	elif crystal_color == "Green":
-		$Sprite2D.modulate = Color("#7fff7f")
+		$CrystalSprite.frame = 2
 	elif crystal_color == "Purple":
-		$Sprite2D.modulate = Color("#7f7fff")
+		$CrystalSprite.frame = 0
 	elif crystal_color == "Yellow":
-		$Sprite2D.modulate = Color("#ffff7f")
+		$CrystalSprite.frame = 2
 
 func is_pressed():
 	pressed = false

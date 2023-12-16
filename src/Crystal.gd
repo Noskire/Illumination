@@ -19,14 +19,14 @@ var time
 
 func _ready():
 	if crystal_color == "Blue":
-		$Sprite2D.set_texture(load(blue_path))
+		$Sprite2D.frame = 2
 	elif crystal_color == "Green":
-		$Sprite2D.set_texture(load(green_path))
+		$Sprite2D.frame = 1
 	elif crystal_color == "Purple":
-		$Sprite2D.set_texture(load(purple_path))
+		$Sprite2D.frame = 0
 	elif crystal_color == "Yellow":
-		$Sprite2D.set_texture(load(yellow_path))
-	$Sprite2D.set_modulate(Color(color_inactive)) # Set initial color
+		$Sprite2D.frame = 3
+	#$Sprite2D.set_modulate(Color(color_inactive)) # Set initial color
 	time = 0
 
 func _process(delta):
@@ -39,7 +39,7 @@ func _process(delta):
 		# Not powering, so set time to 0
 		time = 0.0
 	# Tint the node with a interpolation of color_inactive to color_active
-	$Sprite2D.set_modulate(Color(color_inactive).lerp(Color(color_active), (time / time_needed)))
+	#$Sprite2D.set_modulate(Color(color_inactive).lerp(Color(color_active), (time / time_needed)))
 
 func powering(color, value):
 	# Only start to power up if the line/color is equal to color_active

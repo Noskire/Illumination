@@ -23,12 +23,16 @@ var crit_and # critical_angle ???
 func _ready():
 	line = first_line
 	if crystal_color == "Blue":
+		$Sprite2D.frame = 1
 		line.set_default_color(Color("#2d7fff"))
 	elif crystal_color == "Green":
+		$Sprite2D.frame = 2
 		line.set_default_color(Color("#7fff7f"))
 	elif crystal_color == "Purple":
-		line.set_default_color(Color("#7f7fff"))
+		$Sprite2D.frame = 0
+		line.set_default_color(Color("#ff7f7f"))
 	elif crystal_color == "Yellow":
+		$Sprite2D.frame = 2
 		line.set_default_color(Color("#ffff7f"))
 	second_line = null
 	pu = null

@@ -15,9 +15,11 @@ func _physics_process(_delta):
 	elif Input.is_action_just_released("pull"):
 		ray.set_target_position(Vector2(40, 0))
 	
+	$Sprite2D.frame = 0
 	if ray.is_colliding():
 		var coll = ray.get_collider()
 		if coll.is_in_group("Movable"):
+			$Sprite2D.frame = 1
 			coll.move(velocity)
 
 func get_direction() -> Vector2:

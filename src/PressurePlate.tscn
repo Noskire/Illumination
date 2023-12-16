@@ -1,19 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://dynjwf7w8peom"]
+[gd_scene load_steps=6 format=3 uid="uid://dynjwf7w8peom"]
 
-[ext_resource type="Texture2D" uid="uid://dw53o5vyo7dwt" path="res://assets/Portal_2.png" id="1_131qo"]
 [ext_resource type="Script" path="res://src/PressurePlate.gd" id="1_jghia"]
+[ext_resource type="Texture2D" uid="uid://cfwj8jpdui7yk" path="res://assets/plate.png" id="2_pra4x"]
 [ext_resource type="AudioStream" uid="uid://bvycwu23kelf2" path="res://assets/SFX/press_ok_button_31.mp3" id="3_1qmsn"]
+[ext_resource type="Texture2D" uid="uid://d3yep0kbvcte7" path="res://assets/crystals.png" id="3_t6sh5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ws35y"]
-radius = 16.0
+radius = 28.0
 
 [node name="PressurePlate" type="Area2D"]
 script = ExtResource("1_jghia")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2, 0)
-scale = Vector2(0.326, 0.326)
-texture = ExtResource("1_131qo")
+position = Vector2(1, -4)
+scale = Vector2(4, 4)
+texture = ExtResource("2_pra4x")
+
+[node name="CrystalSprite" type="Sprite2D" parent="."]
+position = Vector2(1, 3)
+scale = Vector2(4, 4)
+texture = ExtResource("3_t6sh5")
+hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ws35y")
