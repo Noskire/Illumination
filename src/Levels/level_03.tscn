@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://cfibesxsun7c6"]
+[gd_scene load_steps=12 format=3 uid="uid://cfibesxsun7c6"]
 
 [ext_resource type="Texture2D" uid="uid://dh50sg6qvxjge" path="res://assets/tileset.png" id="1_spucn"]
 [ext_resource type="PackedScene" uid="uid://bmup6c2tjt0kf" path="res://src/hud.tscn" id="2_tyuo2"]
+[ext_resource type="Theme" uid="uid://sntbsi2ymcbo" path="res://assets/theme.tres" id="2_v3gm5"]
 [ext_resource type="PackedScene" uid="uid://lq8lgxulsw1l" path="res://src/player.tscn" id="3_ukr1r"]
 [ext_resource type="PackedScene" uid="uid://ba6ibsmnicerj" path="res://src/laser.tscn" id="4_v3x4q"]
 [ext_resource type="PackedScene" uid="uid://bs0f4if65kw2g" path="res://src/crystal.tscn" id="5_pc5qq"]
@@ -58,6 +59,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 64.0
 grow_horizontal = 2
+theme = ExtResource("2_v3gm5")
 
 [node name="Label" type="Label" parent="Tip/Control"]
 layout_mode = 1
@@ -66,7 +68,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Good Luck! :)"
+text = "Press -- Esc / P / Start  (Joystick) -- to pause!"
 horizontal_alignment = 1
 vertical_alignment = 1
 

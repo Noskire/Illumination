@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dynjwf7w8peom"]
+[gd_scene load_steps=5 format=3 uid="uid://dynjwf7w8peom"]
 
 [ext_resource type="Texture2D" uid="uid://dw53o5vyo7dwt" path="res://assets/Portal_2.png" id="1_131qo"]
 [ext_resource type="Script" path="res://src/PressurePlate.gd" id="1_jghia"]
+[ext_resource type="AudioStream" uid="uid://bvycwu23kelf2" path="res://assets/SFX/press_ok_button_31.mp3" id="3_1qmsn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ws35y"]
 radius = 16.0
@@ -16,6 +17,9 @@ texture = ExtResource("1_131qo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_ws35y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1qmsn")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

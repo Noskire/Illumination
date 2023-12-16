@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://sntbsi2ymcbo"]
+
+[ext_resource type="FontFile" uid="uid://wi24ah8t6vo0" path="res://assets/Jura-Bold.ttf" id="1_6nna0"]
+
+[resource]
+default_font = ExtResource("1_6nna0")
+default_font_size = 26

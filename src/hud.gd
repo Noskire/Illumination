@@ -39,7 +39,8 @@ func open_menu(time):
 	$Control.visible = true
 	var best_time = Global.levels_time[Global.actual_level]
 	if time < best_time or best_time == 0.0:
-		Global.levels_time[Global.actual_level] = time
+		#Global.levels_time[Global.actual_level] = time
+		Global.update_levels_time(Global.actual_level, time)
 		var tmin = str(int(time / 60.0))
 		var tseg = int(time) % 60
 		if tseg < 10:
@@ -58,7 +59,7 @@ func open_menu(time):
 
 func _on_next_button_up():
 	var path = Global.get_level_path(Global.actual_level+1)
-	Global.actual_level += 1
+	Global.update_actual_level(Global.actual_level + 1)
 	get_tree().paused = false
 	get_tree().change_scene_to_file(path)
 

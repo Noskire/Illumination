@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmup6c2tjt0kf"]
+[gd_scene load_steps=3 format=3 uid="uid://bmup6c2tjt0kf"]
 
 [ext_resource type="Script" path="res://src/hud.gd" id="1_wq3pj"]
+[ext_resource type="Theme" uid="uid://sntbsi2ymcbo" path="res://assets/theme.tres" id="2_ibpcv"]
 
 [node name="HUD" type="CanvasLayer"]
 process_mode = 3
@@ -13,13 +14,14 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 256.0
-offset_top = 144.0
+offset_top = 94.0
 offset_right = -256.0
-offset_bottom = -144.0
+offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("2_ibpcv")
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
 layout_mode = 1

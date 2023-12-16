@@ -21,15 +21,16 @@ func is_pressed():
 	for c in crystals:
 		if c.crystal_color == crystal_color and c.powered_up:
 			pressed = true
+			$AudioStreamPlayer.play(0.0)
 
 func _on_body_entered(body):
 	if body.is_in_group("PowerUp"):
 		crystals.append(body)
-	is_pressed()
+		is_pressed()
 
 func _on_body_exited(body):
 	for c in crystals:
 		if body == c:
 			crystals.erase(body)
+			is_pressed()
 			break
-	is_pressed()

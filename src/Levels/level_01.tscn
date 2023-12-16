@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cyiq0h5d716lv"]
+[gd_scene load_steps=13 format=3 uid="uid://cyiq0h5d716lv"]
 
 [ext_resource type="Texture2D" uid="uid://dh50sg6qvxjge" path="res://assets/tileset.png" id="1_hlwek"]
+[ext_resource type="Theme" uid="uid://sntbsi2ymcbo" path="res://assets/theme.tres" id="2_0ihog"]
 [ext_resource type="PackedScene" uid="uid://bmup6c2tjt0kf" path="res://src/hud.tscn" id="2_1x0eo"]
 [ext_resource type="PackedScene" uid="uid://lq8lgxulsw1l" path="res://src/player.tscn" id="2_3pcvb"]
 [ext_resource type="PackedScene" uid="uid://bovet6w1nb1b8" path="res://src/door.tscn" id="3_dkxhr"]
@@ -61,6 +62,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 64.0
 grow_horizontal = 2
+theme = ExtResource("2_0ihog")
 
 [node name="Label" type="Label" parent="Tip/Control"]
 layout_mode = 1
@@ -69,7 +71,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Use WASD / Arrows to move!"
+text = "Use -- WASD / Arrows / Left Stick (Joystick) -- to move!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -96,6 +98,8 @@ texture = ExtResource("6_0pl01")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crystal"]
 position = Vector2(-3, 0)
 shape = SubResource("RectangleShape2D_udwod")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Crystal"]
 
 [node name="Door" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("3_dkxhr")]
 position = Vector2(800, 160)

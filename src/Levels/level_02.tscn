@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cn8kshnllx5d0"]
+[gd_scene load_steps=11 format=3 uid="uid://cn8kshnllx5d0"]
 
 [ext_resource type="Texture2D" uid="uid://dh50sg6qvxjge" path="res://assets/tileset.png" id="1_n547v"]
 [ext_resource type="PackedScene" uid="uid://bmup6c2tjt0kf" path="res://src/hud.tscn" id="2_2sajb"]
+[ext_resource type="Theme" uid="uid://sntbsi2ymcbo" path="res://assets/theme.tres" id="2_hh2vh"]
 [ext_resource type="PackedScene" uid="uid://lq8lgxulsw1l" path="res://src/player.tscn" id="3_cbspk"]
 [ext_resource type="PackedScene" uid="uid://bs0f4if65kw2g" path="res://src/crystal.tscn" id="4_xxyo0"]
 [ext_resource type="PackedScene" uid="uid://dynjwf7w8peom" path="res://src/PressurePlate.tscn" id="5_6qfbt"]
@@ -57,6 +58,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 64.0
 grow_horizontal = 2
+theme = ExtResource("2_hh2vh")
 
 [node name="Label" type="Label" parent="Tip/Control"]
 layout_mode = 1
@@ -65,7 +67,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Hold Space key to pull objects!"
+text = "Hold -- Space / Numpad 0 / A (Joystick) -- to pull objects!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
