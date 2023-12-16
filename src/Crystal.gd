@@ -19,13 +19,13 @@ var time
 
 func _ready():
 	if crystal_color == "Blue":
-		$Sprite2D.frame = 2
-	elif crystal_color == "Green":
 		$Sprite2D.frame = 1
+	elif crystal_color == "Green":
+		$Sprite2D.frame = 2
 	elif crystal_color == "Purple":
 		$Sprite2D.frame = 0
 	elif crystal_color == "Yellow":
-		$Sprite2D.frame = 3
+		$Sprite2D.frame = 2
 	#$Sprite2D.set_modulate(Color(color_inactive)) # Set initial color
 	time = 0
 

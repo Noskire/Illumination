@@ -7,14 +7,15 @@ var pressed = false
 
 func _ready():
 	# Placeholder
-	if crystal_color == "Blue":
-		$CrystalSprite.frame = 1
-	elif crystal_color == "Green":
-		$CrystalSprite.frame = 2
-	elif crystal_color == "Purple":
-		$CrystalSprite.frame = 0
-	elif crystal_color == "Yellow":
-		$CrystalSprite.frame = 2
+	#if crystal_color == "Blue":
+		#$CrystalSprite.frame = 1
+	#elif crystal_color == "Green":
+		#$CrystalSprite.frame = 2
+	#elif crystal_color == "Purple":
+		#$CrystalSprite.frame = 0
+	#elif crystal_color == "Yellow":
+		#$CrystalSprite.frame = 2
+	pass
 
 func is_pressed():
 	pressed = false

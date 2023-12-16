@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bs0f4if65kw2g"]
 
 [ext_resource type="Script" path="res://src/Crystal.gd" id="1_t1b43"]
-[ext_resource type="Texture2D" path="res://assets/pillars.png" id="2_epq6r"]
+[ext_resource type="Texture2D" uid="uid://d3yep0kbvcte7" path="res://assets/crystals.png" id="2_4m72q"]
 [ext_resource type="AudioStream" uid="uid://bj8xvy7jbulm3" path="res://assets/SFX/beam_cannon_charge.mp3" id="3_3h0ti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udwod"]
@@ -12,11 +12,9 @@ collision_mask = 3
 script = ExtResource("1_t1b43")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -16)
 scale = Vector2(3, 3)
-texture = ExtResource("2_epq6r")
-hframes = 4
-vframes = 2
+texture = ExtResource("2_4m72q")
+hframes = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_udwod")

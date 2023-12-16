@@ -18,7 +18,7 @@ func _process(_delta):
 			pause()
 
 func pause():
-	$Control/VBox/Title.visible = false
+	$Control/VBox/Title.set_text("Game Paused")
 	$Control/VBox/Time.visible = false
 	$Control/VBox/Next.visible = false
 	$Control.visible = true
@@ -26,7 +26,7 @@ func pause():
 	paused = true
 
 func unpause():
-	$Control/VBox/Title.visible = true
+	$Control/VBox/Title.set_text("Level Completed")
 	$Control/VBox/Time.visible = true
 	if Global.get_level_path(Global.actual_level+1) != "-1":
 		$Control/VBox/Next.visible = true

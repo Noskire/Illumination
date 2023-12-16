@@ -23,17 +23,32 @@ var crit_and # critical_angle ???
 func _ready():
 	line = first_line
 	if crystal_color == "Blue":
-		$Sprite2D.frame = 1
+		#$Sprite2D.frame = 1
 		line.set_default_color(Color("#2d7fff"))
 	elif crystal_color == "Green":
-		$Sprite2D.frame = 2
+		#$Sprite2D.frame = 2
 		line.set_default_color(Color("#7fff7f"))
 	elif crystal_color == "Purple":
-		$Sprite2D.frame = 0
+		#$Sprite2D.frame = 0
 		line.set_default_color(Color("#ff7f7f"))
 	elif crystal_color == "Yellow":
-		$Sprite2D.frame = 2
+		#$Sprite2D.frame = 2
 		line.set_default_color(Color("#ffff7f"))
+	
+	var rot = round(rotation_degrees)
+	print(rot)
+	if rot == 0:
+		$Sprite2D.frame = 4 # Red
+	elif rot == 180:
+		$Sprite2D.frame = 1 # Green
+		$Sprite2D.rotation_degrees = -rotation_degrees
+	elif rot == 90:
+		$Sprite2D.frame = 2 # Blue
+		$Sprite2D.rotation_degrees = -rotation_degrees
+	else:
+		$Sprite2D.frame = 3 # Green
+		$Sprite2D.rotation_degrees = -rotation_degrees
+	
 	second_line = null
 	pu = null
 	line_color = crystal_color

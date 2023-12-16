@@ -27,3 +27,12 @@ func _on_sound_slider_value_changed(value):
 	if not $AudioStreamPlayer.is_playing():
 		$AudioStreamPlayer.play()
 	Global.update_volume(value)
+
+func _on_check_box_toggled(toggled_on):
+	if toggled_on:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+
+func _on_quit_button_up():
+	get_tree().quit()

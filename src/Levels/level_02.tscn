@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cn8kshnllx5d0"]
+[gd_scene load_steps=12 format=3 uid="uid://cn8kshnllx5d0"]
 
 [ext_resource type="Texture2D" uid="uid://k0njwe4wxn0q" path="res://assets/tileset3.png" id="1_rdmhr"]
 [ext_resource type="PackedScene" uid="uid://bmup6c2tjt0kf" path="res://src/hud.tscn" id="2_2sajb"]
 [ext_resource type="Theme" uid="uid://sntbsi2ymcbo" path="res://assets/theme.tres" id="2_hh2vh"]
+[ext_resource type="PackedScene" uid="uid://cy1ypk5vuadqb" path="res://src/torch.tscn" id="2_sdfjs"]
 [ext_resource type="PackedScene" uid="uid://lq8lgxulsw1l" path="res://src/player.tscn" id="3_cbspk"]
 [ext_resource type="PackedScene" uid="uid://bs0f4if65kw2g" path="res://src/crystal.tscn" id="4_xxyo0"]
 [ext_resource type="PackedScene" uid="uid://dynjwf7w8peom" path="res://src/PressurePlate.tscn" id="5_6qfbt"]
@@ -843,7 +844,6 @@ texture_region_size = Vector2i(64, 64)
 11:9/0/physics_layer_0/angular_velocity = 0.0
 11:9/0/physics_layer_1/linear_velocity = Vector2(0, 0)
 11:9/0/physics_layer_1/angular_velocity = 0.0
-11:9/0/physics_layer_1/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 5:8/size_in_atlas = Vector2i(1, 2)
 5:8/0 = 0
 5:8/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -867,7 +867,21 @@ format = 2
 layer_0/name = "Floor"
 layer_0/tile_data = PackedInt32Array(0, 4, 0, 65536, 4, 1, 131072, 4, 2, 196608, 4, 3, 262144, 4, 4, 327680, 4, 5, 393216, 4, 6, 458752, 4, 7, 524288, 4, 8, 1, 65540, 0, 2, 131076, 0, 3, 196612, 0, 4, 262148, 0, 5, 327684, 0, 6, 393220, 0, 7, 458756, 0, 8, 262148, 0, 9, 327684, 0, 10, 393220, 0, 11, 655364, 0, 12, 720900, 0, 13, 786436, 0, 14, 655364, 0, 15, 983044, 0, 65551, 983044, 1, 131087, 983044, 2, 196623, 983044, 3, 262159, 983044, 4, 327695, 983044, 5, 393231, 983044, 6, 458767, 983044, 7, 524303, 983044, 8, 524300, 786436, 8, 524301, 851972, 8, 524302, 917508, 8, 524295, 458756, 8, 524296, 524292, 8, 524297, 524292, 8, 524298, 589828, 8, 524299, 655364, 8, 524289, 65540, 8, 524290, 131076, 8, 524291, 196612, 8, 524292, 720900, 8, 524293, 786436, 8, 524294, 524292, 8, 65537, 65540, 1, 65538, 131076, 1, 65539, 196612, 1, 65540, 262148, 1, 65541, 327684, 1, 65542, 393220, 1, 65543, 131076, 1, 65544, 196612, 1, 65545, 262148, 1, 65546, 327684, 1, 65547, 655364, 1, 65548, 720900, 1, 65549, 786436, 1, 65550, 917508, 1, 131073, 65540, 2, 196609, 65540, 3, 262145, 65540, 4, 327681, 65540, 5, 393217, 65540, 6, 458753, 65540, 7, 131074, 393220, 3, 196610, 393220, 3, 262146, 393220, 3, 327682, 393220, 3, 393218, 393220, 3, 458754, 393220, 3, 131075, 393220, 3, 196611, 393220, 3, 262147, 524292, 2, 327683, 655364, 7, 393219, 655364, 2, 458755, 655364, 3, 131076, 393220, 3, 196612, 393220, 3, 327684, 720900, 7, 393220, 720900, 1, 458756, 720900, 2, 131077, 393220, 3, 196613, 393220, 3, 262149, 524292, 2, 327685, 786436, 7, 393221, 786436, 7, 458757, 786436, 7, 131078, 393220, 3, 196614, 393220, 3, 262150, 524292, 2, 327686, 393220, 3, 393222, 393220, 3, 458758, 393220, 3, 131079, 393220, 3, 196615, 393220, 3, 262151, 524292, 2, 327687, 393220, 3, 393223, 393220, 3, 458759, 393220, 3, 131080, 393220, 3, 196616, 393220, 3, 262152, 393220, 3, 327688, 393220, 3, 458760, 393220, 3, 131081, 393220, 3, 196617, 393220, 3, 262153, 393220, 3, 327689, 393220, 3, 393225, 393220, 3, 458761, 393220, 3, 131082, 393220, 3, 196618, 393220, 3, 262154, 393220, 3, 327690, 393220, 3, 393226, 393220, 3, 458762, 393220, 3, 131083, 655364, 2, 196619, 655364, 2, 262155, 655364, 2, 393227, 655364, 4, 458763, 393220, 3, 131084, 720900, 2, 196620, 720900, 2, 327692, 720900, 3, 393228, 720900, 4, 458764, 393220, 3, 131085, 786436, 2, 196621, 786436, 2, 327693, 786436, 3, 393229, 786436, 4, 458765, 393220, 3, 131086, 393220, 3, 196622, 393220, 3, 262158, 393220, 3, 327694, 393220, 3, 393230, 393220, 3, 458766, 393220, 3, 327691, 655364, 3, 262148, 524292, 2, 393224, 458756, 3, 262157, 786436, 2, 262156, 720900, 2)
 layer_1/name = "Obstacles"
-layer_1/tile_data = PackedInt32Array()
+layer_1/tile_data = PackedInt32Array(327685, 655364, 9, 262153, 589828, 9, 393225, 589828, 9, 65550, 655364, 9, 196619, 655364, 9, 262157, 589828, 9)
+layer_2/name = "Addon"
+layer_2/tile_data = PackedInt32Array(458753, 720900, 9, 65537, 720900, 9, 458766, 720900, 9)
+
+[node name="Torch" parent="TileMap" instance=ExtResource("2_sdfjs")]
+position = Vector2(96, 88)
+
+[node name="Torch2" parent="TileMap" instance=ExtResource("2_sdfjs")]
+position = Vector2(928, 88)
+
+[node name="Torch3" parent="TileMap" instance=ExtResource("2_sdfjs")]
+position = Vector2(96, 472)
+
+[node name="Torch4" parent="TileMap" instance=ExtResource("2_sdfjs")]
+position = Vector2(928, 472)
 
 [node name="Tip" type="CanvasLayer" parent="."]
 
@@ -888,6 +902,7 @@ offset_top = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Hold -- Space / Numpad 0 / A (Joystick) -- to pull objects!"
 horizontal_alignment = 1
 
@@ -907,7 +922,8 @@ time_needed = 0.1
 powering_up = true
 
 [node name="Door" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("6_pv7ee")]
-position = Vector2(32, 352)
+position = Vector2(67, 377)
+scale = Vector2(0.7, 2)
 crystal_color = "Blue"
 pressure_plate = NodePath("../PressurePlate")
 

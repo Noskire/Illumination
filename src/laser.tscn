@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ba6ibsmnicerj"]
 
 [ext_resource type="Script" path="res://src/laser.gd" id="1_lofr7"]
-[ext_resource type="Texture2D" uid="uid://d3yep0kbvcte7" path="res://assets/crystals.png" id="2_772qi"]
+[ext_resource type="Texture2D" uid="uid://b5c5oj6vovtvw" path="res://assets/pillars.png" id="2_4uncl"]
 
 [node name="Laser" type="Node2D"]
 script = ExtResource("1_lofr7")
@@ -13,8 +13,8 @@ target_position = Vector2(1000, 0)
 points = PackedVector2Array(0, 0, 100, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
-rotation = 1.5708
+position = Vector2(0, 5)
 scale = Vector2(2, 2)
-texture = ExtResource("2_772qi")
-hframes = 3
+texture = ExtResource("2_4uncl")
+hframes = 4
+vframes = 2

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7qnjkiisoxx2"]
+[gd_scene load_steps=13 format=3 uid="uid://c7qnjkiisoxx2"]
 
 [ext_resource type="PackedScene" uid="uid://buceltkhrvx1h" path="res://src/tile_map2.tscn" id="2_431v8"]
 [ext_resource type="PackedScene" uid="uid://bmup6c2tjt0kf" path="res://src/hud.tscn" id="2_ll6eb"]
@@ -10,13 +10,15 @@
 [ext_resource type="PackedScene" uid="uid://bs0f4if65kw2g" path="res://src/crystal.tscn" id="8_xoolb"]
 [ext_resource type="PackedScene" uid="uid://bb1fgtbhjbfsy" path="res://src/reflection.tscn" id="9_nrds2"]
 [ext_resource type="PackedScene" uid="uid://bovet6w1nb1b8" path="res://src/door.tscn" id="10_d1hbo"]
+[ext_resource type="PackedScene" uid="uid://03ejjdlgyd16" path="res://src/v_door.tscn" id="10_sg5yn"]
 [ext_resource type="PackedScene" uid="uid://lq8lgxulsw1l" path="res://src/player.tscn" id="11_n17hj"]
 
 [node name="Level 10" type="Node2D"]
 
 [node name="TileMap" parent="." instance=ExtResource("2_431v8")]
-layer_0/tile_data = PackedInt32Array(0, 4, 0, 65536, 4, 1, 131072, 4, 2, 196608, 4, 3, 262144, 720900, 1342177288, 327680, 4, 5, 393216, 4, 6, 458752, 4, 7, 524288, 4, 8, 1, 65540, 0, 2, 131076, 0, 3, 196612, 0, 4, 655364, 0, 5, 720900, 0, 6, 786436, 0, 7, 851972, 2, 8, 262148, 0, 9, 655364, 0, 10, 720900, 0, 11, 786436, 0, 12, 524292, 0, 13, 589828, 0, 14, 655364, 0, 15, 983044, 0, 65551, 983044, 1, 131087, 983044, 2, 196623, 983044, 2, 262159, 983044, 3, 327695, 983044, 4, 393231, 983044, 6, 458767, 983044, 7, 524303, 983044, 8, 524300, 786436, 8, 524301, 851972, 8, 524302, 917508, 8, 524295, 458756, 8, 524296, 524292, 8, 524297, 458756, 8, 524298, 524292, 8, 524299, 589828, 8, 524289, 524292, 8, 524290, 524292, 8, 524291, 458756, 8, 524292, 458756, 8, 524293, 524292, 8, 524294, 589828, 8, 65537, 65540, 1, 65538, 131076, 1, 65539, 196612, 1, 65540, 655364, 1, 65541, 720900, 1, 65542, 786436, 1, 65543, 851972, 2, 65544, 196612, 1, 65545, 655364, 1, 65546, 720900, 1, 65547, 786436, 1, 65548, 458756, 1, 65549, 524292, 1, 65550, 917508, 1, 131073, 65540, 2, 196609, 655364, 1342177282, 262145, 720900, 1342177282, 327681, 786436, 1342177282, 393217, 65540, 6, 458753, 65540, 7, 131074, 393220, 3, 196610, 655364, 1342177282, 262146, 720900, 1342177282, 327682, 786436, 1342177282, 393218, 393220, 3, 458754, 393220, 3, 131075, 393220, 3, 196611, 655364, 1342177282, 262147, 720900, 1342177282, 327683, 786436, 805306375, 393219, 327684, 3, 458755, 393220, 3, 131076, 655364, 2, 196612, 655364, 3, 327684, 720900, 805306375, 393220, 655364, 2, 458756, 655364, 5, 131077, 720900, 2, 196613, 720900, 2, 262149, 262148, 1610612742, 327685, 655364, 805306375, 393221, 720900, 2, 458757, 655364, 5, 131078, 786436, 2, 196614, 786436, 3, 262150, 720900, 1342177282, 327686, 786436, 1342177282, 393222, 786436, 2, 458758, 655364, 5, 131079, 393220, 3, 196615, 655364, 1342177282, 262151, 720900, 1342177282, 327687, 786436, 1342177282, 393223, 393220, 3, 458759, 655364, 5, 131080, 393220, 3, 196616, 655364, 1342177282, 262152, 720900, 1342177282, 327688, 786436, 1342177282, 393224, 393220, 3, 458760, 655364, 5, 131081, 655364, 4, 196617, 655364, 2, 262153, 720900, 1342177282, 327689, 786436, 1342177282, 393225, 655364, 2, 458761, 655364, 5, 131082, 720900, 4, 196618, 720900, 2, 262154, 262148, 1610612742, 327690, 786436, 1342177282, 393226, 720900, 2, 458762, 655364, 5, 131083, 786436, 4, 196619, 786436, 2, 262155, 720900, 1342177282, 393227, 786436, 2, 458763, 655364, 5, 131084, 393220, 3, 196620, 655364, 5, 262156, 655364, 5, 327692, 655364, 5, 393228, 393220, 3, 458764, 393220, 3, 131085, 393220, 3, 196621, 655364, 1342177282, 262157, 720900, 1342177282, 327693, 786436, 1342177282, 393229, 393220, 3, 458765, 393220, 3, 131086, 393220, 3, 196622, 917508, 2, 262158, 917508, 3, 327694, 917508, 4, 393230, 393220, 3, 458766, 393220, 3, 327691, 786436, 1342177282, 262148, 262148, 1342177286)
+layer_0/tile_data = PackedInt32Array(0, 4, 0, 65536, 4, 1, 131072, 4, 2, 196608, 4, 3, 262144, 720900, 1342177288, 327680, 4, 5, 393216, 4, 6, 458752, 4, 7, 524288, 4, 8, 1, 65540, 0, 2, 131076, 0, 3, 196612, 0, 4, 655364, 0, 5, 720900, 0, 6, 786436, 0, 7, 851972, 2, 8, 262148, 0, 9, 655364, 0, 10, 720900, 0, 11, 786436, 0, 12, 524292, 0, 13, 589828, 0, 14, 655364, 0, 15, 983044, 0, 65551, 983044, 1, 131087, 983044, 2, 196623, 983044, 2, 262159, 983044, 3, 327695, 983044, 4, 393231, 983044, 6, 458767, 983044, 7, 524303, 983044, 8, 524300, 786436, 8, 524301, 851972, 8, 524302, 917508, 8, 524295, 458756, 8, 524296, 524292, 8, 524297, 458756, 8, 524298, 524292, 8, 524299, 589828, 8, 524289, 524292, 8, 524290, 524292, 8, 524291, 458756, 8, 524292, 458756, 8, 524293, 524292, 8, 524294, 589828, 8, 65537, 65540, 1, 65538, 131076, 1, 65539, 196612, 1, 65540, 655364, 1, 65541, 720900, 1, 65542, 786436, 1, 65543, 851972, 2, 65544, 196612, 1, 65545, 655364, 1, 65546, 720900, 1, 65547, 786436, 1, 65548, 458756, 1, 65549, 524292, 1, 65550, 917508, 1, 131073, 65540, 2, 196609, 655364, 1342177282, 262145, 720900, 1342177282, 327681, 786436, 1342177282, 393217, 65540, 6, 458753, 65540, 7, 131074, 393220, 3, 196610, 655364, 1342177282, 262146, 720900, 1342177282, 327682, 786436, 1342177282, 393218, 393220, 3, 458754, 393220, 3, 131075, 393220, 3, 196611, 655364, 1342177282, 262147, 720900, 1342177282, 327683, 786436, 805306375, 393219, 327684, 3, 458755, 393220, 3, 131076, 655364, 2, 196612, 655364, 3, 327684, 720900, 805306375, 393220, 655364, 2, 458756, 655364, 5, 131077, 720900, 2, 196613, 720900, 2, 262149, 262148, 1610612742, 327685, 655364, 805306375, 393221, 720900, 2, 458757, 655364, 5, 131078, 786436, 2, 196614, 786436, 3, 262150, 720900, 1342177282, 327686, 786436, 1342177282, 393222, 786436, 2, 458758, 655364, 5, 131079, 393220, 3, 196615, 655364, 1342177282, 262151, 720900, 1342177282, 327687, 786436, 1342177282, 393223, 393220, 3, 458759, 655364, 5, 131080, 393220, 3, 196616, 655364, 1342177282, 262152, 720900, 1342177282, 327688, 786436, 1342177282, 393224, 393220, 3, 458760, 655364, 5, 131081, 655364, 4, 196617, 655364, 2, 262153, 720900, 1342177282, 327689, 786436, 1342177282, 393225, 655364, 2, 458761, 655364, 5, 131082, 720900, 4, 196618, 720900, 2, 262154, 262148, 1610612742, 327690, 786436, 1342177282, 393226, 720900, 2, 458762, 655364, 5, 131083, 786436, 4, 196619, 786436, 2, 262155, 720900, 1342177282, 393227, 786436, 2, 458763, 655364, 5, 131084, 393220, 3, 196620, 655364, 5, 262156, 655364, 5, 327692, 655364, 5, 393228, 393220, 3, 458764, 393220, 3, 131085, 393220, 3, 196621, 655364, 1342177282, 262157, 720900, 1342177282, 327693, 786436, 1342177282, 393229, 393220, 3, 458765, 393220, 3, 131086, 393220, 3, 196622, 917508, 2, 262158, 917508, 3, 327694, 917508, 4, 393230, 393220, 3, 458766, 917508, 7, 327691, 786436, 1342177282, 262148, 262148, 1342177286)
 layer_1/tile_data = PackedInt32Array(393217, 262148, 9, 327682, 458756, 9, 458757, 458756, 9, 327685, 458756, 9, 458761, 524292, 9, 393224, 524292, 9, 327689, 327684, 8, 327690, 524292, 9, 458762, 393220, 9, 262156, 262148, 9, 262158, 524292, 9, 131082, 524292, 9)
+layer_2/tile_data = PackedInt32Array(458753, 720900, 9, 65537, 720900, 9, 65550, 720900, 9, 458766, 720900, 9, 131074, 655364, 9, 262148, 589828, 9, 327686, 589828, 9, 393222, 655364, 9, 262151, 589828, 9, 393225, 589828, 9, 327694, 655364, 9, 65544, 589828, 9)
 
 [node name="HUD" parent="." instance=ExtResource("2_ll6eb")]
 
@@ -25,19 +27,19 @@ position = Vector2(480, 45)
 
 [node name="PressurePlate" parent="." instance=ExtResource("4_6cre4")]
 position = Vector2(128, 160)
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="PressurePlate2" parent="." instance=ExtResource("4_6cre4")]
 position = Vector2(896, 464)
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="PressurePlate3" parent="." instance=ExtResource("4_6cre4")]
 position = Vector2(608, 416)
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="PressurePlate4" parent="." instance=ExtResource("4_6cre4")]
 position = Vector2(96, 352)
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="PortalIn" parent="." node_paths=PackedStringArray("portal_out") instance=ExtResource("5_nqv8t")]
 position = Vector2(320, 357)
@@ -49,26 +51,26 @@ position = Vector2(256, 160)
 [node name="Laser" parent="." instance=ExtResource("7_ndlf5")]
 position = Vector2(800, 64)
 rotation = 1.5708
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="Crystal" parent="." instance=ExtResource("8_xoolb")]
 position = Vector2(128, 160)
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="Crystal2" parent="." instance=ExtResource("8_xoolb")]
 position = Vector2(896, 464)
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="Crystal3" parent="." instance=ExtResource("8_xoolb")]
 position = Vector2(608, 416)
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="CollisionShape2D" parent="Crystal3" index="1"]
 scale = Vector2(1, 0.7)
 
 [node name="Crystal4" parent="." instance=ExtResource("8_xoolb")]
 position = Vector2(96, 352)
-crystal_color = "Purple"
+crystal_color = "Blue"
 
 [node name="Reflection" parent="." instance=ExtResource("9_nrds2")]
 position = Vector2(896, 128)
@@ -91,31 +93,25 @@ scale = Vector2(1, 0.8)
 position = Vector2(832, 192)
 rotation = -3.92699
 
-[node name="Door" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("10_d1hbo")]
-position = Vector2(672, 96)
-rotation = 1.5708
-scale = Vector2(0.6, 1)
-crystal_color = "Purple"
+[node name="VDoor" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("10_sg5yn")]
+position = Vector2(670, 121)
+scale = Vector2(2, 0.3)
 pressure_plate = NodePath("../PressurePlate")
 
 [node name="Door2" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("10_d1hbo")]
-position = Vector2(720, 288)
-scale = Vector2(0.6, 1)
+position = Vector2(761, 295)
+scale = Vector2(0.3, 2)
 crystal_color = "Purple"
 pressure_plate = NodePath("../PressurePlate2")
 
-[node name="Door3" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("10_d1hbo")]
-position = Vector2(672, 272)
-rotation = 1.5708
-scale = Vector2(0.6, 1)
-crystal_color = "Purple"
+[node name="VDoor2" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("10_sg5yn")]
+position = Vector2(674, 313)
+scale = Vector2(2, 0.3)
 pressure_plate = NodePath("../PressurePlate3")
 
-[node name="Door4" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("10_d1hbo")]
-position = Vector2(352, 272)
-rotation = 1.5708
-scale = Vector2(0.6, 1)
-crystal_color = "Purple"
+[node name="VDoor3" parent="." node_paths=PackedStringArray("pressure_plate") instance=ExtResource("10_sg5yn")]
+position = Vector2(354, 313)
+scale = Vector2(2, 0.3)
 pressure_plate = NodePath("../PressurePlate4")
 
 [node name="Player" parent="." instance=ExtResource("11_n17hj")]

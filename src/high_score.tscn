@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.0352941, 0.0588235, 0.0588235, 1)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
@@ -28,6 +28,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 64.0
 grow_horizontal = 2
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 theme_override_font_sizes/font_size = 35
 text = "Best Times"
 horizontal_alignment = 1
@@ -51,68 +52,81 @@ columns = 2
 [node name="Label1" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label2" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label3" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label4" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label5" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label6" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label7" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label8" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label9" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="Label10" type="Label" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level 01: --:--"
 
 [node name="AllTimes" type="Label" parent="Grid"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "All Levels: --:--"
 
 [node name="Empty" type="Label" parent="Grid"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 
 [node name="Back" type="Button" parent="Grid"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Back to Menu"
 
 [connection signal="button_up" from="Grid/Back" to="." method="_on_back_button_up"]

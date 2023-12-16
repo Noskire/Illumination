@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjbcon0o5lkgg"]
+
+[ext_resource type="AudioStream" uid="uid://b240f6ueone6s" path="res://assets/SFX/BackgroundMusic_1.mp3" id="1_x4214"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_x4214")

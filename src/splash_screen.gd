@@ -17,5 +17,6 @@ func text_to_acronym():
 		$Label.set_text(txt)
 
 func change_scene():
+	BgMusic.play()
 	var path = "res://src/main_menu.tscn"
 	get_tree().change_scene_to_file(path)

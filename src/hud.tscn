@@ -30,7 +30,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.0352941, 0.0588235, 0.0588235, 1)
 
 [node name="VBox" type="VBoxContainer" parent="Control"]
 layout_mode = 1
@@ -47,25 +47,30 @@ theme_override_constants/separation = 25
 
 [node name="Title" type="Label" parent="Control/VBox"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Level Completed"
 horizontal_alignment = 1
 uppercase = true
 
 [node name="Time" type="Label" parent="Control/VBox"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Total Time: mm:ss"
 horizontal_alignment = 1
 
 [node name="Next" type="Button" parent="Control/VBox"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Next Level"
 
 [node name="Restart" type="Button" parent="Control/VBox"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Restart Level"
 
 [node name="Menu" type="Button" parent="Control/VBox"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.792157, 0.858824, 1, 1)
 text = "Main Menu"
 
 [connection signal="button_up" from="Control/VBox/Next" to="." method="_on_next_button_up"]
